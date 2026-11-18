@@ -1,0 +1,18 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="movable-rectangle" name="MovableRectangle">
+    <mxGraphModel dx="900" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="900" pageHeight="600">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="movable" value="&lt;&lt;interface&gt;&gt;&lt;br&gt;Movable&lt;hr&gt;+ moveUp(): void&lt;br&gt;+ moveDown(): void&lt;br&gt;+ moveLeft(): void&lt;br&gt;+ moveRight(): void" style="swimlane;html=1;rounded=0;" vertex="1" parent="1"><mxGeometry x="330" y="30" width="240" height="145" as="geometry"/></mxCell>
+        <mxCell id="point" value="MovablePoint&lt;hr&gt;~ x: int&lt;br&gt;~ y: int&lt;br&gt;~ xSpeed: int&lt;br&gt;~ ySpeed: int&lt;hr&gt;+ MovablePoint(x: int, y: int, xSpeed: int, ySpeed: int)&lt;br&gt;+ moveUp(): void&lt;br&gt;+ moveDown(): void&lt;br&gt;+ moveLeft(): void&lt;br&gt;+ moveRight(): void&lt;br&gt;+ toString(): String" style="swimlane;html=1;rounded=0;" vertex="1" parent="1"><mxGeometry x="50" y="285" width="300" height="210" as="geometry"/></mxCell>
+        <mxCell id="rectangle" value="MovableRectangle&lt;hr&gt;- topLeft: MovablePoint&lt;br&gt;- bottomRight: MovablePoint&lt;hr&gt;+ MovableRectangle(x1: int, y1: int, x2: int, y2: int, xSpeed: int, ySpeed: int)&lt;br&gt;+ hasSameSpeed(): boolean&lt;br&gt;+ SpeedTest(): boolean&lt;br&gt;+ moveUp(): void&lt;br&gt;+ moveDown(): void&lt;br&gt;+ moveLeft(): void&lt;br&gt;+ moveRight(): void&lt;br&gt;+ toString(): String" style="swimlane;html=1;rounded=0;" vertex="1" parent="1"><mxGeometry x="500" y="285" width="370" height="230" as="geometry"/></mxCell>
+        <mxCell id="e1" style="dashed=1;dashPattern=3 3;endArrow=block;endFill=0;html=1;" edge="1" parent="1" source="point" target="movable"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e2" style="dashed=1;dashPattern=3 3;endArrow=block;endFill=0;html=1;" edge="1" parent="1" source="rectangle" target="movable"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e3" value="topLeft, bottomRight" style="endArrow=diamond;endFill=1;html=1;" edge="1" parent="1" source="point" target="rectangle"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="pointMultiplicity" value="2" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="330" y="350" width="20" height="20" as="geometry"/></mxCell>
+        <mxCell id="rectangleMultiplicity" value="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="490" y="350" width="20" height="20" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
